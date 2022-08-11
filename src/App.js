@@ -1,14 +1,12 @@
-/* eslint-disable */
-import "./App.css";
-import React from "react";
-import Calculator from "./components/Calculator";
+import './App.css';
+import React from 'react';
+import Calculator from './components/Calculator';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
   }
 
-  /* eslint-enable */
   render() {
     return (
       <div className="App">

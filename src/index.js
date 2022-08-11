@@ -1,11 +1,10 @@
-/* eslint-disable */
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
-import calculate from "./logic/calculator";
-import Calculator from "./components/Calculator";
-/* eslint-enable */
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import calculate from './logic/calculator';
+import Calculator from './components/Calculator';
+
 const bbb = new Calculator();
 ReactDOM.render(
   <React.StrictMode>

@@ -1,6 +1,3 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable no-else-return */
-/* eslint-disable prefer-template */
 import operate from './operate';
 
 function isNumber(item) {
@@ -54,7 +51,7 @@ export default function calculate(obj, buttonName) {
       if (obj.next.includes('.')) {
         return {};
       }
-      return { next: obj.next + '.' };
+      return { next: `${obj.next}.` };
     }
     if (obj.operation) {
       return { next: '0.' };
@@ -63,7 +60,7 @@ export default function calculate(obj, buttonName) {
       if (obj.total.includes('.')) {
         return {};
       }
-      return { total: obj.total + '.' };
+      return { total: `${obj.total}.` };
     }
     return { total: '0.' };
   }
@@ -75,10 +72,9 @@ export default function calculate(obj, buttonName) {
         next: null,
         operation: null,
       };
-    } else {
-      // '=' with no operation, nothing to do
-      return {};
     }
+    // '=' with no operation, nothing to do
+    return {};
   }
 
   if (buttonName === '+/-') {
