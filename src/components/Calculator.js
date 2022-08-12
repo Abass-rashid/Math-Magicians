@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import calculate from "../logic/calculator";
+import React, { useState } from 'react';
+import calculate from '../logic/calculator';
 
 const Calculator = () => {
   const defaultObject = {
@@ -11,18 +11,18 @@ const Calculator = () => {
 
   const handleEvent = (e) => {
     const btns = e.target.innerHTML;
-    if (object.operation === "÷" && btns === "=" && object.next === "0") {
-      document.getElementById("calc-p").innerHTML = "Math Error";
+    if (object.operation === '÷' && btns === '=' && object.next === '0') {
+      document.getElementById('calc-p').innerHTML = 'Math Error';
       setTimeout(() => {
         changeState({ ...defaultObject });
       }, 1000);
     } else if (
-      object.operation !== null &&
-      btns === "=" &&
-      object.next !== null &&
-      object.total === null
+      object.operation !== null
+      && btns === '='
+      && object.next !== null
+      && object.total === null
     ) {
-      document.getElementById("calc-p").innerHTML = "Syntaxe Error";
+      document.getElementById('calc-p').innerHTML = 'Syntaxe Error';
       setTimeout(() => {
         changeState({ ...defaultObject });
       }, 1000);
@@ -33,33 +33,33 @@ const Calculator = () => {
   };
 
   const buttonsList = [
-    "AC",
-    "+/-",
-    "%",
-    "÷",
+    'AC',
+    '+/-',
+    '%',
+    '÷',
     7,
     8,
     9,
-    "x",
+    'x',
     4,
     5,
     6,
-    "-",
+    '-',
     1,
     2,
     3,
-    "+",
+    '+',
     0,
-    ".",
-    "=",
+    '.',
+    '=',
   ];
   return (
     <div className="calc">
       <div className="calc-input">
         <p id="calc-p">
-          {(object.total || "") +
-            (object.operation || "") +
-            (object.next || "")}
+          {(object.total || '')
+            + (object.operation || '')
+            + (object.next || '')}
         </p>
       </div>
       <table className="calc-buttons">
